@@ -2,8 +2,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
--- File explorer shortcuts
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex, { desc = "Open file explorer" })
+-- File Explorer
+vim.keymap.set("n", "<leader>m", "<Cmd>NvimTreeFocus<CR>", { desc = "Focus on File Explorer" })
+vim.keymap.set("n", "<leader>e", "<Cmd>NvimTreeToggle<CR>", { desc = "Toggle File Explorer" })
 
 -- Navigation
 vim.keymap.set("n", "<C-d>", "<C-d>zz") -- Always center after jumping
