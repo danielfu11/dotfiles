@@ -8,3 +8,9 @@ vim.keymap.set("n", "<leader>e", vim.cmd.Ex, { desc = "Open file explorer" })
 -- Navigation
 vim.keymap.set("n", "<C-d>", "<C-d>zz") -- Always center after jumping
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- Buffers
+vim.keymap.set("n", "<leader>sh", vim.cmd.split)
+vim.keymap.set("n", "<leader>sv", vim.cmd.vsplit)
+vim.keymap.set("n", "<leader>bn", vim.cmd.bnext)
+vim.keymap.set("n", "<leader>bp", vim.cmd.bprevious)
