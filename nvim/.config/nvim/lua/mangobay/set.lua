@@ -26,6 +26,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "100"
 vim.opt.showmatch = true
 vim.opt.matchtime = 2
+vim.opt.laststatus = 3       -- This is how I get 1 status line for all splits
 
 -- File
 vim.opt.autoread = true      -- auto reload files changed outside nvim
