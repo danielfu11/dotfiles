@@ -1,5 +1,5 @@
--- For now, having all plugins defined here
--- Hopefully I won't use too many plugins but if that ever becomes the case I'll split them up
+-- All the one-liner, no-config-required plugins are managed here
 return {
+  { "mason-org/mason.nvim", opts = {} }, -- Mason as a package manager for LSPs, DAPs, etc.
   { "nvim-tree/nvim-web-devicons", opts = {} },
 }
