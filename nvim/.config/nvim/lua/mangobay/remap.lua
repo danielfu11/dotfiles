@@ -15,3 +15,7 @@ vim.keymap.set("n", "<leader>sh", vim.cmd.split)
 vim.keymap.set("n", "<leader>sv", vim.cmd.vsplit)
 vim.keymap.set("n", "<leader>bn", vim.cmd.bnext)
 vim.keymap.set("n", "<leader>bp", vim.cmd.bprevious)
+
+-- Remaps for copying to system clipboard
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
