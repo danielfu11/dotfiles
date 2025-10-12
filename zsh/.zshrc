@@ -104,8 +104,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
 
-export PATH="$HOME/.local/bin:$HOME/gcc-arm-none-eabi/bin:$PATH"
+export PATH="$HOME/.global-node-modules/bin:$HOME/.local/bin:$HOME/gcc-arm-none-eabi/bin:$PATH"
 
+# fzf setup
+export FZF_DEFAULT_COMMAND="fd"
 source <(fzf --zsh)
 
 . "$HOME/.cargo/env"
