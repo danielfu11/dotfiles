@@ -22,6 +22,6 @@ require("lazy").setup({
   },
   spec = "mangobay.lazy",
   change_detection = { notify = false },
-  -- automatically check for plugin updates
-  checker = { enabled = true },
+  -- don't automatically check for plugin updates
+  checker = { enabled = false },
 })
