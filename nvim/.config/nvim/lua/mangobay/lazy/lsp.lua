@@ -5,7 +5,7 @@ return {
     vim.lsp.config.clangd = {
       cmd = {
         "clangd",
-        "--query-driver=" .. vim.env.HOME .. "/gcc-arm-none-eabi/bin/arm-none-eabi-*",
+        "--query-driver=**"
       }
     }
     vim.lsp.enable({
