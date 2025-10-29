@@ -5,7 +5,8 @@ return {
     vim.lsp.config.clangd = {
       cmd = {
         "clangd",
-        "--query-driver=**"
+        "--query-driver=**",
+        "--header-insertion=never",
       }
     }
     vim.lsp.enable({
