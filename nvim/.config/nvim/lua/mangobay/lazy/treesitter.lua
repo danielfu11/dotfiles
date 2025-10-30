@@ -6,7 +6,7 @@ return {
       require("nvim-treesitter.configs").setup({
         ensure_installed = {
           "c", "cpp", "rust", "asm", "bitbake", "cmake", "devicetree", "kconfig",
-          "lua", "make", "markdown", "python", "yaml", "zig", "toml"
+          "lua", "make", "markdown", "python", "yaml", "zig", "toml", "json"
         },
         auto_install = false,
         highlight = {
