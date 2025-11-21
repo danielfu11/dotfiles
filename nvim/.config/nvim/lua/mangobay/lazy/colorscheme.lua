@@ -11,6 +11,7 @@ return {
         flavour = "macchiato",
       })
       vim.cmd.colorscheme("catppuccin")
+      vim.api.nvim_set_hl(0, "LspInlayHint", { fg = "#a5adcb", bg = "#1e2030" })
     end,
   },
 }

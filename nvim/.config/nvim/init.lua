@@ -52,6 +52,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
     keymap("n", "<leader>pd", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts) -- previous diagnostic
     keymap("n", "<leader>nd", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts) -- next diagnostic
     keymap("n", "K", vim.lsp.buf.hover, opts) -- hover documentation
+    -- toggle inlay hints
+    if client.server_capabilities.inlayHintProvider then
+      keymap("n", "<leader>ti",
+        function()
+          vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+        end
+      )
+    end
 
     -- fzf-lua keymaps
     keymap("n", "<leader>gd", "<cmd>FzfLua lsp_finder<CR>", opts) -- LSP Finder (definition + references)
