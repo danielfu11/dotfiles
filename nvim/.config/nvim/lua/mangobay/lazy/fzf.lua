@@ -7,6 +7,13 @@ return {
       { "<leader>fb", function() require("fzf-lua").buffers() end,   desc = "Buffers" },
       { "<leader>fr", function() require("fzf-lua").resume() end,    desc = "Resume last picker" },
     },
-    opts = {}
+    opts = {},
+    config = function()
+      require('fzf-lua').setup {
+        grep = {
+          hidden = true,
+        }
+      }
+    end
   },
 }

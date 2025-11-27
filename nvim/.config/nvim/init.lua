@@ -41,17 +41,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
     }
 
     -- native neovim keymaps
-    keymap("n", "<leader>gd", vim.lsp.buf.definition, opts)                                      -- goto definition
-    keymap("n", "<leader>gD", vim.lsp.buf.declaration, opts)                                     -- goto declaration
+    keymap("n", "<leader>gd", vim.lsp.buf.definition, opts)                           -- goto definition
+    keymap("n", "<leader>gD", vim.lsp.buf.declaration, opts)                          -- goto declaration
     keymap("n", "<leader>gi", vim.lsp.buf.implementation, opts)
-    keymap("n", "<leader>gS", "<cmd>vsplit | lua vim.lsp.buf.definition()<CR>", opts)            -- goto definition in split
-    keymap("n", "<leader>ca", vim.lsp.buf.code_action, opts)                                     -- Code actions
-    keymap("n", "<leader>rn", vim.lsp.buf.rename, opts)                                          -- Rename symbol
-    keymap("n", "<leader>D", "<cmd>lua vim.diagnostic.open_float({ scope = 'line' })<CR>", opts) -- Line diagnostics (float)
-    keymap("n", "<leader>d", vim.diagnostic.open_float, opts)                                    -- Cursor diagnostics
-    keymap("n", "<leader>pd", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)                   -- previous diagnostic
-    keymap("n", "<leader>nd", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)                   -- next diagnostic
-    keymap("n", "K", vim.lsp.buf.hover, opts)                                                    -- hover documentation
+    keymap("n", "<leader>gS", "<cmd>vsplit | lua vim.lsp.buf.definition()<CR>", opts) -- goto definition in split
+    keymap("n", "<leader>ca", vim.lsp.buf.code_action, opts)                          -- Code actions
+    keymap("n", "<leader>rn", vim.lsp.buf.rename, opts)                               -- Rename symbol
+    keymap("n", "K", vim.lsp.buf.hover, opts)                                         -- hover documentation
     -- toggle inlay hints
     if client.server_capabilities.inlayHintProvider then
       keymap("n", "<leader>ti",

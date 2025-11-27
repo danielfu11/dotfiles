@@ -17,9 +17,15 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 -- Buffers
 vim.keymap.set("n", "<leader>sh", vim.cmd.split)
 vim.keymap.set("n", "<leader>sv", vim.cmd.vsplit)
-vim.keymap.set("n", "<leader>bn", vim.cmd.bnext)
-vim.keymap.set("n", "<leader>bp", vim.cmd.bprevious)
+-- NOTE TO SELF: always read the docs before remapping shit
+-- vim.keymap.set("n", "<leader>bn", vim.cmd.bnext)
+-- vim.keymap.set("n", "<leader>bp", vim.cmd.bprevious)
 
--- Remaps for copying to system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+-- paste keeps buffer on replace
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- delete to void
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
