@@ -19,7 +19,7 @@ return {
       -- C-k: Toggle signature help (if signature.enabled = true)
       --
       -- See :h blink-cmp-config-keymap for defining your own keymap
-      keymap = { preset = 'default' },
+      keymap = { preset = 'enter' },
 
       appearance = {
         -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
@@ -30,7 +30,7 @@ return {
       -- (Default) Only show the documentation popup when manually triggered
       completion = {
         documentation = { auto_show = false },
-        list = { selection = { preselect = true } },
+        list = { selection = { preselect = false } },
       },
 
       -- Default list of enabled providers defined so that you can extend it
