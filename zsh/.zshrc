@@ -104,6 +104,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
 
+export EDITOR="/usr/bin/nvim"
+
 export PATH="$HOME/.global-node-modules/bin:$HOME/.local/bin:$HOME/gcc-arm-none-eabi/bin:$PATH"
 
 # fzf setup
