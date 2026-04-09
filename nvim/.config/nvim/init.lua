@@ -45,6 +45,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     keymap("n", "<leader>gD", vim.lsp.buf.declaration, opts)                          -- goto declaration
     keymap("n", "<leader>gi", vim.lsp.buf.implementation, opts)
     keymap("n", "<leader>gS", "<cmd>vsplit | lua vim.lsp.buf.definition()<CR>", opts) -- goto definition in split
+    keymap("n", "<leader>gH", "<cmd>split | lua vim.lsp.buf.definition()<CR>", opts)
     keymap("n", "<leader>ca", vim.lsp.buf.code_action, opts)                          -- Code actions
     keymap("n", "<leader>rn", vim.lsp.buf.rename, opts)                               -- Rename symbol
     keymap("n", "K", vim.lsp.buf.hover, opts)                                         -- hover documentation
